@@ -3,6 +3,20 @@
     margin: 0;
     padding: 0;
     font-family: 'Cutive Mono', monospace;
+    color: #FFAFAA;
+    
+}
+body {   
+    background-color: #4D706C;
+}
+p {
+  margin: 1% 7%;
+  padding: 2% 2%; 
+  font-weight: bolder;
+  font-size: 1rem;
+ /*  background-color: #fff;  */
+  color:#FFAFAA;
+  text-align: center; 
 }
 
 /* 
@@ -15,22 +29,28 @@
     section {
        width: 100%;
        height: 100vh;
+       margin: 0;
+       padding: 0;
        background-color: #4D706C;
     }
     .navbar {
-        background-color:rgba(7, 7, 5, .2); 
-        width: 100vw;   
-        height: 10vh;
+        width: 100%;
+        height: 10vh ; 
+        margin: 0; 
+
         position: sticky;
         bottom: 0%;
+       
     }
   
     .navbar #arrow {
-      font-size: 2.5rem;
-     animation: shake 1.3s infinite;
+        width: 10%;
+        height: 50% ; 
+        font-size: 3rem;
+        animation: shake 1.3s infinite;
       /* background-color: #fff; */
-      color: rgb(235, 226, 226);
-      margin:5% 45%;
+        color: rgb(155, 149, 148);
+        margin:3% 45%;
     }
 
     @keyframes shake {
@@ -42,36 +62,33 @@
       90%{transform: translatey( .5em);} */
       100%{transform: translatey( 0);}
     }
-  /* .navbar  figure {
-      width: 100%;
-      height: 80%;
-      animation: shake 1s infinite;
-    
-    } */
-  /*   .navbar  figure img {
-      width: 13%;
-      height: 80%;   
-      margin: 5% 43%;
-      
-    } */
-
+ 
     .navbar #navbarList {
-        width: 100% ;      
+        width: 100% ;
+        height: 100%;     
+        background-color:rgba(7, 7, 5, .2); 
         margin: 0;
-        padding: 25px 30px ;
+        padding: 0 ;
         display: none;
     }
     .navbar #navbarList li {
-       list-style: none ;
+        list-style: none ;
+        width: 100%;
+        height: 100% ;
     }
     
     .navbar #navbarList li a {
+        width: 100%;
+        height: 100% ;
         display: block;
         color: #FFAFAA;
-        padding: 0 15px;
+        padding: 13% 20%;
         text-decoration: none; 
-        font-size: 1.3rem;     
+        font-size: 1rem;    
     }
+   /*  .navbar #navbarList #contact {
+      display: none;
+    } */
     /* .navbar #navbarList li a.active {
       color: blue
     } */
@@ -87,36 +104,44 @@
  */   color:#FFAFAA;
     }
     #aboutme p {
-      margin: 1% 7%;
-      padding: 5% 2%; 
-      font-weight: bolder;
+      
       font-size: 1.3rem;
      /*  background-color: #fff;  */
-      color:#FFAFAA;
-      text-align: center; 
+   
     }
     #aboutme #contactList {
-      width: 100% ;      
+      width: 100% ;   
+      height: 20%;   
       margin: 0;
-      padding: 25px 50px ;
-      display: flex;
+      padding: 7% 23%;
+      
     }
-    section li {
+    #aboutme ul li {
+      width: 30% ;   
+      height: 100%; 
       list-style: none ;
+      display: inline-block;
     }
-    section li a {
+    #aboutme #contactList li a {
+      width: 100% ;   
+      height: 100%; 
       display: block;
       color: #FFAFAA;
       padding: 15px 18px;
       text-decoration: none; 
-   
     }
+
     #aboutme #contactList li a i{
       font-size: 2.5rem;
     }
-
-    #projects #projectsList {
-      font-size: 2rem;
+    
+    #panDemonium h1 {
+      margin : 0;
+      padding: 5%;
+      font-size: 2.5rem;
+    }
+    #panDemonium #projectsList {
+      font-size: 2.5rem;
     }
 
   /* 
