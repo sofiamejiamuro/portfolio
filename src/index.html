@@ -6,6 +6,8 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Cutive+Mono|Fascinate|Josefin+Slab&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
     <title>Sofia Mejia</title>
 </head>
 <body>
@@ -87,15 +89,16 @@
             <input type="submit" value="ENVIAR">
         </form>
     </section>
-
-    <nav class="navbar"> 
-        <i id="arrow" class="fa fa-angle-double-up" ontouchstart="menuAppear()"></i>
-        <ul id="navbarList">
-            <li><a href="#aboutme">¿Quién soy?</a></li> 
-            <li id="projects" ><a href="#panDemonium">Proyectos</a></li>
-            <li id="contact"><a href="#contacto">Contacto</a></li>  
-        </ul> 
-    </nav>
+    <div class="navbar">
+        <div class="float-button" id="float-button"></div>
+        <nav class="circular-menu" id="circular-menu">
+            <ul>
+                <li><a href="#aboutme"><i class="material-icons">emoji_people</i>quién soy</a></li>
+                <li><a href="#contacto"><i class="material-icons">mail</i>contacto</a></li>
+                <li><a href="#panDemonium"><i class="material-icons">code</i>proyectos</a></li>
+            </ul>
+        </nav>
+    </div>
     <script src="./index.js"></script>
 </body>
 </html>

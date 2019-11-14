@@ -1,16 +1,16 @@
-const menuAppear = () => {
+ const menuAppear = () => {
     console.log('menu');
     document.getElementById("arrow").style.display = "none"; 
     document.getElementById("navbarList").style.display = "flex"; 
 }
 
-const changeNav  = () => {
-    document.getElementById("projects").style.display = "none"; 
-    document.getElementById("contact").style.display = "block"; 
-}
+const floatButton = document.getElementById('float-button'),
+circularMenu = document.getElementById('circular-menu');
+      
+floatButton.addEventListener('click', () => {
+  floatButton.classList.toggle('pulsed');
+  circularMenu.classList.toggle('expand');
+}) 
 
 
-const changeNav2  = () => {
-    document.getElementById("contact").style.display = "none"; 
-    document.getElementById("projects").style.display = "block"; 
-}
+ 
