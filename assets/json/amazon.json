@@ -1,0 +1,15 @@
+[{"id":"alexaSkills",
+	"titulo":"¡Alexa!",
+	"description":"Alexa Skill  para jugar un quiz con la  interfaz de voz de Amazon",
+	"image":["../picture/alexa.png",
+			"../picture/alexa1.jpeg",
+			"../picture/alexa3.png",
+			"../picture/alexa4.png",
+			"../picture/alexa5.jpg",
+			"../picture/alexa6.jpg",
+			"../picture/alexa7.jpg",
+			"../picture/alexa8.jpg",
+			"../picture/Amazon-Alexaa.jpg"
+		]
+	}
+]

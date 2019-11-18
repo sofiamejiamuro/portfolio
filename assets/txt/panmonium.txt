@@ -1,0 +1,1 @@
+web app que optimiza la toma de pedidos y la cobranza del restaurante vegano 

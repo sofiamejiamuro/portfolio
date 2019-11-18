@@ -1,0 +1,12 @@
+[{"id":"portafolio",
+	"titulo":"Mi portafolio",
+	"description":"Proceso creativo de mi portafolio",
+	"image":["../picture/miPortafolio/portafolio1.png",
+			"../picture/miPortafolio/portafolio2.jpg",
+			"../picture/miPortafolio/portafolio3.png",
+			"../picture/miPortafolio/portafolio4.jpg",
+			"../picture/miPortafolio/portafolio-menu-iteracion-1.avi",
+			"../picture/miPortafolio/portafolio-menu-iteracion-2.avi"
+		]
+	}
+]

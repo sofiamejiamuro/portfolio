@@ -1,0 +1,2 @@
+330 ohms
+Interfaz para mejorar el servicio de cotizaciones a sus clientes de forma rápida, segura y eficiente.
