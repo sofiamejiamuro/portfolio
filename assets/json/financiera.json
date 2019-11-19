@@ -5,17 +5,17 @@
 	"copy_1":"¡Haz tu pedido!",
 	"copy_2":"Código",
 	"description":"¿Quieres Ahorrar?s",
-	"image":["assets/picture/fintech1.jpg",
-			"assets/picture/fintech2.jpg",
-			"assets/picture/fintech3.jpg",
-			"assets/picture/fintech4.png",
-			"assets/picture/fintech5.png",
-			"assets/picture/fintech6.png",
-			"assets/picture/fintech7.png",
-			"assets/picture/fintech8.png",
-			"assets/picture/fintech9.png",
-			"assets/picture/fintech10.png",
-			"assets/picture/fintech11.png"
+	"image":["assets/picture/fintechApp/fintech1.jpg",
+			"assets/picture/fintechApp/fintech2.jpg",
+			"assets/picture/fintechApp/fintech3.jpg",
+			"assets/picture/fintechApp/fintech4.PNG",
+			"assets/picture/fintechApp/fintech5.png",
+			"assets/picture/fintechApp/fintech6.png",
+			"assets/picture/fintechApp/fintech7.png",
+			"assets/picture/fintechApp/fintech8.png",
+			"assets/picture/fintechApp/fintech9.png",
+			"assets/picture/fintechApp/fintech10.png",
+			"assets/picture/fintechApp/fintech11.png"
 			
 		]
 	}

@@ -5,15 +5,15 @@
 	"copy_1":"¡Haz tu pedido!",
 	"copy_2":"Código",
 	"description":"Alexa Skill  para jugar un quiz con la  interfaz de voz de Amazon",
-	"image":["assets/picture/alexa.png",
-			"assets/picture/alexa1.jpeg",
-			"assets/picture/alexa3.png",
-			"assets/picture/alexa4.png",
-			"assets/picture/alexa5.jpg",
-			"assets/picture/alexa6.jpg",
-			"assets/picture/alexa7.jpg",
-			"assets/picture/alexa8.jpg",
-			"assets/picture/Amazon-Alexaa.jpg"
+	"image":["assets/picture/alexa/alexa.png",
+			"assets/picture/alexa/alexa1.jpeg",
+			"assets/picture/alexa/alexa3.png",
+			"assets/picture/alexa/alexa4.png",
+			"assets/picture/alexa/alexa5.jpg",
+			"assets/picture/alexa/alexa6.jpg",
+			"assets/picture/alexa/alexa7.jpg",
+			"assets/picture/alexa/alexa8.jpg",
+			"assets/picture/alexa/Amazon-Alexaa.jpg"
 		]
 	}
 ]
