@@ -1,0 +1,15 @@
+[{"id":"contacto",
+	"titulo":"Hablemos",
+
+	"type": "text",
+	"type2": "email",
+	"type3":"submit",
+	"value":"ENVIAR",
+	"name":"firstname",
+	"label1":"Tu nombre",
+	"label2":"Tu correo",
+	"label3":"Soy toda oidos <br> ¿En qué te puedo ayudar?",
+
+	"description":"Interfaz para mejorar el servicio de cotizaciones a sus clientes de forma rápida, segura y eficiente."
+	}
+]

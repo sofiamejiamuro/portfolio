@@ -9,7 +9,19 @@
 }
 body{
 	    background-color: #4D706C;
-	    overflow-x: hidden;
+	    overflow: hidden;
+}
+p{
+		margin: 1rem auto;
+		padding: .5rem;
+
+		font-size:2.7ex;
+		text-align: center;
+
+		color: #FFAFAA;
+		overflow-y: scroll;
+		z-index: 0;
+
 }
 section{
 
@@ -20,7 +32,7 @@ section{
 	width: 95vw;
 
 	border: 3px solid rgba(16, 16, 13, .2);
-	
+
 	h1{
 		margin:1rem auto 0 auto;
 
@@ -32,20 +44,10 @@ section{
 		font-size: 2.5rem;
 		font-family: 'Fascinate', cursive;
 	}
-	p{
+	p#title{
 		height: 60vh;
 		width: 90%;
-		
-		margin: 0 auto;
-		padding: .5rem;
-
-		font-size:2.7ex;
-		text-align: center;
-
-		color: #FFAFAA;
-		overflow-y: scroll;
-		z-index: 0;
-	}
+		}
 
 
 	ul{
@@ -98,7 +100,7 @@ $elements: 3;
   position: absolute;
   bottom: 1.1rem;
   right: 1rem;
-  z-index: 150000;
+  z-index: 5000;
   transition: transform var(--animation-time);
   cursor: pointer;
   
@@ -135,7 +137,7 @@ $elements: 3;
   transform: scale(0) rotate(-180deg);
   opacity: 0;
   transition: all var(--animation-time);
-  z-index: 100000;
+  z-index: 4000;
   
   &.expand {
     transform: scale(1) rotate(0);
@@ -238,14 +240,10 @@ nav{
 /* animaciones */
 
 
-	#aboutme{
-
-	}
 
 	.class_todisapearmenu{
 	position:absolute;
-
-	animation: outmenu .3s ease-out;
+	animation: outmenu .2s ease-out;
 	animation-fill-mode: both;
 
 	
@@ -253,40 +251,116 @@ nav{
 	}
 	@keyframes outmenu{
 		0%{top: 0;left: 2%; opacity: 1; }
-		100% {top: 100vh;left:100vw; opacity: 0;}
+		100% {top: 0;left:100vw; opacity: 0;}
 	}
 	.class_toapearmenu{
 	position:absolute;
-	top:100;
+	top:0;
 	left:100%;
-	animation: enter .3s ease-out;
+	animation: enter .2s ease-out;
 	animation-fill-mode: both;
 
 	
 
 	}
 	@keyframes enter{
-		0%{	top: 100vh;left: 100vw; opacity: 0; z-index: 0;	}
-		100% {top: 0;left:2%;opacity: 1; z-index: 50000}
+		0%{	top: 0;left: 100vw; opacity: 0; z-index: 0;	}
+		100% {top: 0;left:2%;opacity: 1; z-index: 2000}
 	}
 
 
-#video{
-	background-color: rgba(180, 120, 80,.5);
-	height: 60vh;
-	width: 60vw;
+
+
+
+#panDemonium, #ohms, #alexaSkills, #pocketMonster, #portafolio, #saludFinanciera, #contacto {
+	position:absolute;
+	top:100vh;
+	left: 2%;
+	animation: moves .2s ease-out;
+	animation-fill-mode: both;
+	background-color: #4D706C;
+	
+	z-index:2000 ;
+
+
+	
+
+	}
+	@keyframes moves{
+		0%{	top: 100vh; opacity: 0; }
+		100% {top: 0;opacity: 1; }
+	}
+
+
+
+
+
+#close{
+	height: 4vh;
+	width: 4vh;
+	margin: 0;
+	padding: 0%;
+	font-size: 1.5rem;
+	z-index: 1000000;
+	background-color: rgba(0,0,0,.3);
+	color:white;
 	position: absolute;
-	top: 20%;
-	right: 3vw;
-	z-index: 60000;
+	cursor: pointer;	
+	top:3%;
+	right: 4%;
+	text-align: center;
+	border-radius: 50%;
+	font-family: 'Cutive Mono', monospace;
+
 }
-video{
-	height: 60vh;
+
+
+
+
+
+.slider_container{
+	background-color: red;
+	width: 75vw;
+	height: 50vh;
+	margin: 1.2rem auto;
+	overflow: hidden;
+}
+
+
+.frame_container{
+	background-color: yellow;
+
+	height: 100%;
+	margin: 0 auto;
+	float:left;
+}
+.image-slider{
+
+	height: 50vh;
 	width: 60vw;
-	position: absolute;
-	top: 0%;
-	right: 0vw;
+
 }
-.navigation{
-	z-index: 100000;
+
+
+
+.pleft, .prigth{
+color:black;
+background-color: rgba(0,0,0,.3);
+font-size: 1.2rem;
+float: left; 
+position: absolute;
+left: 0%;
+top: 50%;
+display: block;
+height: 1.2rem;
+width: 1.2rem;
+border-radius: 50%;
+font-family: 'Cutive Mono', monospace;
+overflow: hidden;
+cursor: pointer;
+
+
+}
+.prigth{
+right: -90%;
 }

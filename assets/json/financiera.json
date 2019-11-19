@@ -1,17 +1,21 @@
 [{"id":"saludFinanciera",
 	"titulo":"Fintech App",
+	"href":"",
+	"type": "button",
+	"copy_1":"¡Haz tu pedido!",
+	"copy_2":"Código",
 	"description":"¿Quieres Ahorrar?s",
-	"image":["../picture/fintech1.jpg",
-			"../picture/fintech2.jpg",
-			"../picture/fintech3.jpg",
-			"../picture/fintech4.png",
-			"../picture/fintech5.png",
-			"../picture/fintech6.png",
-			"../picture/fintech7.png",
-			"../picture/fintech8.png",
-			"../picture/fintech9.png",
-			"../picture/fintech10.png",
-			"../picture/fintech11.png"
+	"image":["assets/picture/fintech1.jpg",
+			"assets/picture/fintech2.jpg",
+			"assets/picture/fintech3.jpg",
+			"assets/picture/fintech4.png",
+			"assets/picture/fintech5.png",
+			"assets/picture/fintech6.png",
+			"assets/picture/fintech7.png",
+			"assets/picture/fintech8.png",
+			"assets/picture/fintech9.png",
+			"assets/picture/fintech10.png",
+			"assets/picture/fintech11.png"
 			
 		]
 	}

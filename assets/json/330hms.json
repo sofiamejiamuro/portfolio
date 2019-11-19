@@ -1,16 +1,20 @@
 [{"id":"ohms",
 	"titulo":"330hms",
+	"href":"#",
+	"type": "button",
+	"copy_1":"¡Haz tu pedido!",
+	"copy_2":"Código",
 	"description":"Interfaz para mejorar el servicio de cotizaciones a sus clientes de forma rápida, segura y eficiente.",
-	"image":["../picture/330Ohms/330Ohms1.png",
-			"../picture/330Ohms/330Ohms2.png",
-			"../picture/330Ohms/330Ohms3.png",
-			"../picture/330Ohms/330Ohms4.png",
-			"../picture/330Ohms/330Ohms5.png",
-			"../picture/330Ohms/330Ohms6.png",
-			"../picture/330Ohms/330Ohms7.jpg",
-			"../picture/330Ohms/330Ohms8.jpg",
-			"../picture/330Ohms/330Ohms9.jpg",
-			"../picture/330Ohms/330Ohms10.jpg"
+	"image":["assets/picture/330Ohms/330Ohms1.png",
+			"assets/picture/330Ohms/330Ohms2.png",
+			"assets/picture/330Ohms/330Ohms3.png",
+			"assets/picture/330Ohms/330Ohms4.png",
+			"assets/picture/330Ohms/330Ohms5.png",
+			"assets/picture/330Ohms/330Ohms6.png",
+			"assets/picture/330Ohms/330Ohms7.jpg",
+			"assets/picture/330Ohms/330Ohms8.jpg",
+			"assets/picture/330Ohms/330Ohms9.jpg",
+			"assets/picture/330Ohms/330Ohms10.jpg"
 		]
 	}
 ]
