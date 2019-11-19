@@ -33,6 +33,29 @@ linkPandemonium.addEventListener('mousedown',(e)=> {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 let createSlider = json =>{
 
 
@@ -47,7 +70,7 @@ let createSlider = json =>{
 			prigth.setAttribute('class', 'prigth');
 
 
-			pcontentl = document.createTextNode('<');
+			let pcontentl = document.createTextNode('<'),
 			pcontentr = document.createTextNode('>');
 
 
@@ -63,7 +86,8 @@ let createSlider = json =>{
 
 			};
 
-			
+
+
 			let sectionJson = document.getElementById(json[0].id);
 
 
@@ -76,17 +100,53 @@ let createSlider = json =>{
 	let posx = document.getElementsByClassName('frame_container');
 	console.log(posx[0].style.left);
 
+let poscont =  0;
+
+
 
 pleft.onclick = function(){
-		posx[0].style.transform = 'translateX(' + 100 +'%)'
+	poscont = (poscont - 100/imagenes.length)
+
+		
+
+
+		if (poscont<= (-100) ) {
+			poscont = -100;
+		}else{
+		posx[0].style.transform = 'translateX(' + poscont +'%)'
+				};
+
+				console.log(poscont);
 		
 }
 
 prigth.onclick = function(){
+	poscont = (poscont + 100/imagenes.length)
+
+		
+
+	if (poscont>= 0 ) {
+			poscont = 0;
+		}else{
+		posx[0].style.transform = 'translateX(' + poscont +'%)'
+				};
 
 
-	console.log(frame_container.style.width);
+				console.log(poscont);
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 }
@@ -101,12 +161,12 @@ let createSections = (json)=>{
 		p 		= document.createElement('p'),
 		button_1= document.createElement('button'),
 		button_2= document.createElement('button'),
-		i 		= document.createElement('i')
-		a 		= document.createElement('a');
+		i 		= document.createElement('i'),
+		a 		= document.createElement('a'),
 
-		contenth1 		= document.createTextNode(json[0].titulo);
-		contentp 		=document.createTextNode(json[0].description);
-		content_btn1	=document.createTextNode(json[0].copy_1);
+		contenth1 		= document.createTextNode(json[0].titulo),
+		contentp 		=document.createTextNode(json[0].description),
+		content_btn1	=document.createTextNode(json[0].copy_1),
 		a_content 		=document.createTextNode(json[0].copy_2);
 			section.setAttribute('id',json[0].id );
 			button_1.setAttribute('type', json[0].type);
@@ -175,7 +235,7 @@ let inputs = []
 				document.body.appendChild(section);
 }
 let contentsCall = (e) =>{
-	let route = "./../../assets/json/"+e.target.id+".json";
+	let route = "assets/json/"+e.target.id+".json";
 		fetch(route)
 		  .then(function(response) {
 		    return response.json();

@@ -308,18 +308,23 @@ nav {
   border-radius: 50%;
   font-family: 'Cutive Mono', monospace; }
 
+/* -----------------------------------------------------------------------------Slider--------------------------------------------------------------------- */
 .slider_container {
-  background-color: red;
   width: 75vw;
   height: 50vh;
-  margin: 1.2rem auto;
-  overflow: hidden; }
+  margin: 1.2rem auto; }
 
 .frame_container {
   background-color: yellow;
   height: 100%;
   margin: 0 auto;
-  float: left; }
+  float: left;
+  -webkit-transform: translateX(0);
+  -ms-transform: translateX(0);
+  transform: translateX(0);
+  -webkit-transition: all .3s ease-out;
+  -o-transition: all .3s ease-out;
+  transition: all .3s ease-out; }
 
 .image-slider {
   height: 50vh;
