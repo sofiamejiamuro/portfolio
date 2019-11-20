@@ -215,8 +215,7 @@ let inputs = []
 	form.setAttribute('method','POST');
 	form.setAttribute('action', 'src/php/enviamail.php');
 
-	//el alcoholico sufre por ideas no por reealidades
-	//si si alguien sufre es por una idea que chocó con la realidad, no por la realidad, ¿qué esperabas?
+	
 			inputs[0].setAttribute('name', 'nombre');
 			inputs[1].setAttribute('name', 'correo');
 			inputs[2].setAttribute('name', 'mensaje');
