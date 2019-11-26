@@ -289,7 +289,7 @@ nav {
     opacity: 1;
     z-index: 2000; } }
 
-#panDemonium, #ohms, #alexaSkills, #pocketMonster, #portafolio, #saludFinanciera, #contacto_ {
+#panDemonium, #ohms, #alexaSkills, #pocketMonster, #portafolio, #saludFinanciera, #contacto_, #voltioStation {
   position: absolute;
   top: 100vh;
   left: 1.5%;

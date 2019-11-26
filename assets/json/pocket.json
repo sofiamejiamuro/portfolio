@@ -1,10 +1,11 @@
 [{"id":"pocketMonster",
 	"titulo":"Pocket  Monster",
-	"href":"#",
+	"href":"https://github.com/sofiamejiamuro/Monster-Compare-v1",
+	"href2":"https://sofiamejiamuro.github.io/Monster-Compare-v1/src/",
 	"type": "button",
-	"copy_1":"¡Haz tu pedido!",
+	"copy_1":"¡Atrápa tu pokemon!",
 	"copy_2":"Código",
-	"description":"Web app  para conocer sobre los  pokemones de la región de Kanto",
+	"description":"WebApp  para conocer sobre los  pokemones de la región de Kanto, se muestra proceso de investigación UX.",
 	"image":["assets/picture/pocketMonster/pocketMonster1.jpg",
 			"assets/picture/pocketMonster/pocketMonster2.png",
 			"assets/picture/pocketMonster/pocketMonster3.png",
@@ -22,3 +23,4 @@
 		]
 	}
 ]
+

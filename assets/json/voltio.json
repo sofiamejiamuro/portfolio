@@ -1,0 +1,21 @@
+[{"id":"voltioStation",
+	"titulo":"Voltio Station",
+	"href":"https://github.com/sofiamejiamuro/caragadores-electricos",
+	"href2":"https://sofiamejiamuro.github.io/caragadores-electricos",
+	"type": "button",
+	"copy_1":"Busca tu cargador",
+	"copy_2":"Código",
+	"description":"WebApp para encontrar los cargadores eléctricos más cercanos, filtrarlos y apartarlos, además de poder interactura con ella a través de una interfaz de voz. Proyecto ganador de 2do lugar en hackathon interno de Laboratoria.",
+	"image":["assets/picture/voltioStation/voltioStation1.png",
+			"assets/picture/voltioStation/voltioStation2.png",
+			"assets/picture/voltioStation/voltioStation3.png",
+			"assets/picture/voltioStation/voltioStation4.png",
+			"assets/picture/voltioStation/voltioStation5.png",
+			"assets/picture/voltioStation/voltioStation6.png",
+			"assets/picture/voltioStation/voltioStation7.png"
+			
+		]
+	}
+]
+
+

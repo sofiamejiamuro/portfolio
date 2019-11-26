@@ -1,4 +1,4 @@
- let close = document.getElementById('close');
+let close = document.getElementById('close');
 let boutSelf = document.getElementById('selfAbout');
 
 		close.style.opacity = '0';
@@ -142,6 +142,7 @@ let createSections = (json)=>{
 		button_2= document.createElement('button'),
 		i 		= document.createElement('i'),
 		a 		= document.createElement('a'),
+		a2		= document.createElement('a'),
 
 		contenth1 		= document.createTextNode(json[0].titulo),
 		contentp 		=document.createTextNode(json[0].description),
@@ -149,14 +150,14 @@ let createSections = (json)=>{
 		a_content 		=document.createTextNode(json[0].copy_2);
 			section.setAttribute('id',json[0].id );
 			button_1.setAttribute('type', json[0].type);
-			i.setAttribute('class', 'fa fa-hotdog');
 			a.setAttribute('href', json[0].href );
+			a2.setAttribute('href', json[0].href2 );
 			a.appendChild(a_content);
+			a2.appendChild(content_btn1);
 			button_2.appendChild(a);
 			h1.appendChild(contenth1);
 			p.appendChild(contentp)
-			button_1.appendChild(content_btn1);
-			button_1.appendChild(i)
+			button_1.appendChild(a2);
  		section.appendChild(h1)
  		section.appendChild(p);
  		section.appendChild(button_1);

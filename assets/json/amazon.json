@@ -1,19 +1,17 @@
 [{"id":"alexaSkills",
 	"titulo":"¡Alexa!",	
-	"href":"#",
+	"href":"https://github.com/sofiamejiamuro/quien-sabe-mas",
+	"href2":"#",
 	"type": "button",
-	"copy_1":"¡Haz tu pedido!",
+	"copy_1":" ",
 	"copy_2":"Código",
-	"description":"Alexa Skill  para jugar un quiz con la  interfaz de voz de Amazon",
-	"image":["assets/picture/alexa/alexa.png",
+	"description":"Diseño y programación de un juego de preguntas a través de la interfaz de voz de Amazon. Con este proyecto obtuve el 1er lugar en el Hackathon Women in Voice-Amazon edition CDMX",
+	"image":[
 			"assets/picture/alexa/alexa1.jpeg",
 			"assets/picture/alexa/alexa3.png",
 			"assets/picture/alexa/alexa4.png",
-			"assets/picture/alexa/alexa5.jpg",
 			"assets/picture/alexa/alexa6.jpg",
-			"assets/picture/alexa/alexa7.jpg",
-			"assets/picture/alexa/alexa8.jpg",
-			"assets/picture/alexa/Amazon-Alexaa.jpg"
+			"assets/picture/alexa/alexa7.jpg"
 		]
 	}
 ]
