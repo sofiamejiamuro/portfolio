@@ -1,4 +1,6 @@
  let close = document.getElementById('close');
+let boutSelf = document.getElementById('selfAbout');
+
 		close.style.opacity = '0';
 
 
@@ -20,13 +22,21 @@ floatButton.addEventListener('click', (e) => {
  /*Interactividad boton proyectos de circle menu*/
 
 let nav = document.getElementsByTagName('nav');
-let linkPandemonium = document.getElementById('linkPandemonium');
+let menuProyectos = document.getElementById('proyectos');
 
-linkPandemonium.addEventListener('mousedown',(e)=> {
-	nav[0].classList.toggle('class_todisapearmenu');
-	nav[0].classList.toggle('class_toapearmenu');
+
+let buttonClose  = (e)=> {
+		nav[0].classList.toggle('class_toapearmenu');
+		nav[0].classList.toggle('class_todisapearmenu');
 	}
-);
+
+
+
+
+
+
+
+
 /*Interactividad boton proyectos de circle menu*/
 
 
@@ -35,13 +45,13 @@ let createSlider = json =>{
 
 		let slider_container = document.createElement('div'),
 			frame_container  = document.createElement('div'),
-			pleft 			 = document.createElement('p'),
-			prigth 			 = document.createElement('p'),
+			pleft 			 = document.createElement('a'),
+			prigth 			 = document.createElement('a'),
 			div_menorque	 = document.createElement('div'),
 			div_mayorque	 =document.createElement('div');
 
 			slider_container.setAttribute('class', 'slider_container');
-			frame_container.setAttribute('class', 'frame_container');
+			frame_container.setAttribute('id', 'frame_container');
 			div_mayorque.setAttribute('id', 'prigth');
 			div_menorque.setAttribute('id', 'pleft');
 			pleft.setAttribute('class', 'pleft');
@@ -49,97 +59,86 @@ let createSlider = json =>{
 
 
 		let pcontentl = document.createTextNode('<'),
-		pcontentr = document.createTextNode('>');
+			pcontentr = document.createTextNode('>');
 
 
 			pleft.appendChild(pcontentl);
 			prigth.appendChild(pcontentr);
 
-
-
-
-		
 			let imagenes = json[0].image;
-			let measureFrame = imagenes.length* 100;
-				frame_container.style.width = measureFrame + "%";
-				console.log(measureFrame);
 			for (let i = 0; i < imagenes.length; i++) {
-				var image=document.createElement('img') ;
+				var image=document.createElement('img');
 					image.setAttribute('src', imagenes[i]);
-					image.setAttribute('class','image-slider');
-					image.setAttribute('style', 'width:'+ measureFrame/imagenes.length +'%;');
+					image.setAttribute('class','image_slider');
 					frame_container.appendChild(image);
 
 			};
-
-
 
 			let sectionJson = document.getElementById(json[0].id);
 
 				div_mayorque.appendChild(prigth);
 				div_menorque.appendChild(pleft);
 				slider_container.appendChild(frame_container);
-				slider_container.appendChild(div_menorque);
 				slider_container.appendChild(div_mayorque);
+				slider_container.appendChild(div_menorque);
 				sectionJson.appendChild(slider_container);
+
+			let frame_containerX = document.getElementById('frame_container');
+			let image_slider = document.getElementsByClassName('image_slider');
+				frame_containerX.style.width = imagenes.length * 70 + 'vw';
+				let measuerFrame = 100/imagenes.length;
+				for (var i = 0; i < image_slider.length; i++) {
+					image_slider[i].style.width = measuerFrame + '%';
+				};
+
+
+			let boton_r = document.querySelector('#prigth');
+			let boton_l = document.querySelector('#pleft');
+			let conunter = 1;
+
+
+
+			let moves = () =>{
+
+
+				let counter = 0;
+
+				boton_r.addEventListener('click', e => {
+				frame_containerX.style.transition = 'transform 0.3s ease-out';
+					counter++
+							if (counter>=imagenes.length){
+								counter = imagenes.length-1;
+							}
+				frame_containerX.style.transform = 'translate(-' +counter* measuerFrame +'%)'
+				})
+
+
+				boton_l.addEventListener('click', e => {
+				frame_containerX.style.transition = 'transform 0.3s ease-out';
+					counter--;
+
+							if (counter<=0){
+								counter = 0;
+							}
+				frame_containerX.style.transform = 'translate(-' +counter* measuerFrame +'%)'
+				})
 			
 
-				
-				
-	
-				
+				frame_containerX.addEventListener('transitionend',(e)=>{
+
+				})
 
 
-//				image.style.width = measureFrame/imagenes.length + '%';
-
-			let posx = document.getElementsByClassName('frame_container');
-
-let poscont =  0;
+			}
 
 
 
-div_mayorque.onclick = function(){
-	poscont = (poscont - measureFrame/imagenes.length)
-	console.log(poscont);
-
-		
-
-
-		if (poscont<= (-measureFrame) ) {
-			poscont = -measureFrame;
-		}else{
-		posx[0].style.transform = 'translateX(' + poscont +'%)'
-				};
-
-		
-}
-
-div_menorque.onclick = function(){
-	poscont = (poscont + measureFrame/imagenes.length)
-
-		
-
-	if (poscont>= 0 ) {
-			poscont = 0;
-		}else{
-		posx[0].style.transform = 'translateX(' + poscont +'%)'
-				};
-
-
-}
+			
 
 
 
 
-
-
-
-
-
-
-
-
-
+			moves();
 }
 
 let ul = document.getElementsByClassName('navigation');
@@ -181,6 +180,11 @@ let createSections = (json)=>{
 
  		createSlider(json);
 }
+
+
+
+
+
 let createContact = (json)=>{
 let labels = [];
 let inputs = []
@@ -214,9 +218,6 @@ let inputs = []
 	form.setAttribute('name', 'formulario');
 	form.setAttribute('method','POST');
 	form.setAttribute('action', 'src/php/enviamail.php');
-
-	//el alcoholico sufre por ideas no por reealidades
-	//si si alguien sufre es por una idea que chocó con la realidad, no por la realidad, ¿qué esperabas?
 			inputs[0].setAttribute('name', 'nombre');
 			inputs[1].setAttribute('name', 'correo');
 			inputs[2].setAttribute('name', 'mensaje');
@@ -240,7 +241,6 @@ let inputs = []
 				document.body.appendChild(section);
 				 		close.style.opacity = '1';
 
-				sendInfo()
 
 }
 
@@ -254,17 +254,6 @@ _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_*/
 
 
 
-
-function sendInfo(){
-
-
-
-	let inputs = document.getElementsByTagName('input');
-
-
-	
-
-}
 
 
 
@@ -363,10 +352,10 @@ contacto.addEventListener('mousedown',(e)=>{
 
 	if(document.getElementById('contacto_')){
 		let sectionremove =document.getElementsByTagName('section');
-	for (let i = 0; i < sectionremove.length; i++) {
-		sectionremove[i+1].remove()
-		close.style.opacity = '0';
-	};
+		for (let i = 0; i < sectionremove.length; i++) {
+			sectionremove[i+1].remove()
+			close.style.opacity = '0';
+		};
 
 	}else{
 		contentsCall(e);
@@ -377,18 +366,40 @@ contacto.addEventListener('mousedown',(e)=>{
 
 
 
-close.addEventListener('mousedown', (e)=>{
+
+let closeSection = (e)=>{
+	
 
 	let sectionremove =document.getElementsByTagName('section');
 
 
+		if (e.target.id =='selfAbout' && nav[0].classList[0] !== 'class_todisapearmenu') {
+						 buttonClose(e)
+			for (let i = 0; i < sectionremove.length; i++) {
+				sectionremove[i+1].remove()
+				close.style.opacity = '0';
+				}
+		}else if(e.target.id == 'close') {
+			for (var i = sectionremove.length; i >1; i--) {
+				sectionremove[i-1].remove()
+				}
+				close.style.opacity = '0';
+			}else{
+				for (var i = sectionremove.length; i >1; i--) {
+				sectionremove[i-1].remove()
+								close.style.opacity = '0';
 
-	for (let i = 0; i < sectionremove.length; i++) {
-		sectionremove[i+1].remove()
-		close.style.opacity = '0';
-	};
-})
+				}
+			}
 
+
+}
+
+menuProyectos.addEventListener('mousedown',buttonClose);
+
+selfAbout.addEventListener('mousedown', closeSection)
+
+close.addEventListener('mousedown', closeSection)
 
 
 

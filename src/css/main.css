@@ -13,19 +13,40 @@ body {
   overflow: hidden; }
 
 p {
-  margin: 1rem auto;
+  margin: .5rem auto;
   padding: .5rem;
-  font-size: 2.7ex;
+  font-size: 2.5ex;
   text-align: center;
   color: #FFAFAA;
   overflow-y: scroll;
-  z-index: 0; }
+  z-index: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
 
 section {
+  position: absolute;
+  top: 0;
+  left: 1.5%;
   margin: 3% auto;
   height: 97vh;
   width: 95vw;
   border: 3px solid rgba(16, 16, 13, 0.2); }
+  section button {
+    font-family: 'Fascinate', cursive;
+    display: inline-block;
+    height: 2.5rem;
+    width: 45%;
+    float: left;
+    margin: 1rem 1.5%;
+    border-color: transparent;
+    background-color: rgba(16, 16, 13, 0.2);
+    font-size: 2ex;
+    border-bottom: 3px solid #FFAFAA;
+    cursor: pointer; }
+    section button a {
+      font-family: 'Fascinate', cursive;
+      width: 100%;
+      height: 100%; }
   section h1 {
     margin: 1rem auto 0 auto;
     height: 5rem;
@@ -36,7 +57,8 @@ section {
     font-family: 'Fascinate', cursive; }
   section p#title {
     height: 60vh;
-    width: 90%; }
+    width: 90%;
+    text-align: center; }
   section ul {
     margin: 2rem .2rem;
     height: 5rem;
@@ -74,7 +96,7 @@ section {
 :root {
   --animation-time: .3s; }
 
-/* menu derecha */
+/* menu circular */
 .float-button {
   width: 3rem;
   height: 3rem;
@@ -124,7 +146,8 @@ section {
   -webkit-transition: all var(--animation-time);
   -o-transition: all var(--animation-time);
   transition: all var(--animation-time);
-  z-index: 4000; }
+  z-index: 4000;
+  /* fin circular*/ }
   .circular-menu.expand {
     -webkit-transform: scale(1) rotate(0);
     -ms-transform: scale(1) rotate(0);
@@ -175,6 +198,7 @@ nav {
   z-index: 0;
   border: 3px solid rgba(16, 16, 13, 0.2);
   margin: 3% auto;
+  padding: 0;
   height: 97vh;
   width: 95vw;
   position: absolute;
@@ -188,7 +212,7 @@ nav {
     nav ul li {
       list-style: none;
       height: calc(90%/7);
-      width: 50%;
+      width: 70%;
       margin: .5rem 0;
       position: relative; }
       nav ul li a {
@@ -202,7 +226,7 @@ nav {
         top: 40%;
         left: 0;
         color: #FFAFAA;
-        font-size: 1.1rem; }
+        font-size: 1rem; }
 
 /* animaciones */
 .class_todisapearmenu {
@@ -215,7 +239,7 @@ nav {
 @-webkit-keyframes outmenu {
   0% {
     top: 0;
-    left: 2%;
+    left: 1.5%;
     opacity: 1; }
   100% {
     top: 0;
@@ -225,7 +249,7 @@ nav {
 @keyframes outmenu {
   0% {
     top: 0;
-    left: 2%;
+    left: 1.5%;
     opacity: 1; }
   100% {
     top: 0;
@@ -249,7 +273,7 @@ nav {
     z-index: 0; }
   100% {
     top: 0;
-    left: 2%;
+    left: 1.5%;
     opacity: 1;
     z-index: 2000; } }
 
@@ -261,14 +285,14 @@ nav {
     z-index: 0; }
   100% {
     top: 0;
-    left: 2%;
+    left: 1.5%;
     opacity: 1;
     z-index: 2000; } }
 
 #panDemonium, #ohms, #alexaSkills, #pocketMonster, #portafolio, #saludFinanciera, #contacto_ {
   position: absolute;
   top: 100vh;
-  left: 2%;
+  left: 1.5%;
   -webkit-animation: moves .2s ease-out;
   animation: moves .2s ease-out;
   -webkit-animation-fill-mode: both;
@@ -295,7 +319,7 @@ nav {
 #close {
   height: 4vh;
   width: 4vh;
-  margin: 0;
+  margin: -2% 0;
   padding: 0%;
   font-size: 1.5rem;
   z-index: 1000000;
@@ -309,40 +333,53 @@ nav {
   border-radius: 50%;
   font-family: 'Cutive Mono', monospace; }
 
-/* -----------------------------------------------------------------------------Slider--------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+Slider
+----------------------------------------------------------------------- */
 .slider_container {
-  width: 75vw;
+  width: 70vw;
   height: 50vh;
-  margin: 1.2rem auto; }
-
-.frame_container {
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-transform: translateX(0);
-  -ms-transform: translateX(0);
-  transform: translateX(0);
-  -webkit-transition: all .3s ease-out;
-  -o-transition: all .3s ease-out;
-  transition: all .3s ease-out; }
-
-.image-slider {
-  height: 50vh; }
+  margin: 1.2rem auto;
+  overflow: hidden; }
+  .slider_container #frame_container {
+    height: 100%;
+    overflow: scroll;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    .slider_container #frame_container .image_slider {
+      height: 100%;
+      float: left;
+      margin: 0; }
 
 #pleft, #prigth {
   background-color: rgba(0, 0, 0, 0.3);
-  display: inline-block;
-  height: 1.5rem;
-  width: 1.5rem;
-  cursor: pointer; }
+  padding: 0;
+  margin: 0;
+  height: 2.5rem;
+  width: 2.5rem;
+  position: absolute;
+  top: 50%;
+  left: 1%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+  border-radius: 50%;
+  overflow: hidden; }
   #pleft .pleft, #pleft .prigth, #prigth .pleft, #prigth .prigth {
-    margin: 0 auto;
-    padding: .2%;
-    font-size: 1.5rem;
-    color: black;
-    font-family: 'Cutive Mono', monospace;
-    position: inherit; }
+    text-decoration: none;
+    display: inline-table;
+    margin: -25% auto;
+    padding: 0;
+    font-size: 2.5rem;
+    color: #FFAFAA;
+    font-family: 'Fascinate', cursive;
+    cursor: pointer;
+    border-radius: 50%; }
+
+#prigth {
+  left: 88%; }
 
 /* ----------------------------
 contacto

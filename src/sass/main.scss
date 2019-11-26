@@ -1,6 +1,8 @@
 /* @import 'navbar';
 @import 'circle_menu'; */
 
+$color:#4D706C;
+
 * {
 	margin: 0;
 	padding:0;
@@ -9,22 +11,27 @@
 	color:#FFAFAA;
 }
 body{
-	    background-color: #4D706C;
+	    background-color:$color;
 	    overflow: hidden;
 }
 p{
-		margin: 1rem auto;
+		margin: .5rem auto;
 		padding: .5rem;
 
-		font-size:2.7ex;
+		font-size:2.5ex;
 		text-align: center;
 
 		color: #FFAFAA;
 		overflow-y: scroll;
 		z-index: 0;
+		box-sizing: border-box;
 
 }
 section{
+
+	position: absolute;
+	top: 0;
+	left:1.5%;
 
 	margin: 3% auto;
 	
@@ -33,6 +40,33 @@ section{
 	width: 95vw;
 
 	border: 3px solid rgba(16, 16, 13, .2);
+
+
+
+
+		button{
+			font-family: 'Fascinate', cursive;
+			display: inline-block;
+			height: 2.5rem;
+			width: 45%;
+			float: left;
+			margin:1rem 1.5%;
+			border-color: transparent;
+			background-color: rgba(16, 16, 13, .2);
+			font-size: 2ex;
+			border-bottom: 3px solid #FFAFAA;
+			cursor: pointer;
+
+			a{
+				font-family: 'Fascinate', cursive;
+				width: 100%;
+				height: 100%;
+
+			}
+			
+
+		}
+
 
 	h1{
 		margin:1rem auto 0 auto;
@@ -48,8 +82,12 @@ section{
 	p#title{
 		height: 60vh;
 		width: 90%;
+		text-align: center;
+
 		}
 
+	
+	
 
 	ul{
 		margin: 2rem .2rem;
@@ -71,6 +109,8 @@ section{
 				display: block;
 				font-size: 2.5rem;
 				color:#FFAFAA;
+
+
 				i{
 					display: block;
 					width: 100%;
@@ -85,11 +125,12 @@ section{
 }
 
 
+
 /* --------------------------- */
 :root {
   --animation-time: .3s;
 }
-/* menu derecha */
+/* menu circular */
 $color: rgba(16, 16, 13, .7);
 $elements: 3;
 
@@ -144,7 +185,7 @@ $elements: 3;
     transform: scale(1) rotate(0);
     opacity: 1;
   }
-  
+  /* fin circular*/
   ul {
     margin: 0;
     padding: 0;
@@ -191,6 +232,7 @@ nav{
 	border: 3px solid rgba(16, 16, 13, .2);
 
 	margin: 3% auto;
+	padding: 0;
 	height: 97vh;
 	width: 95vw;
 	position: absolute;
@@ -210,9 +252,10 @@ nav{
 		li{
 		list-style: none;
 		height: calc(90%/7);
-		width:50%;
+		width:70%;
 		margin: .5rem 0;
 		position:relative;
+
 				
 			a{
 				font-family: 'Cutive Mono', monospace;
@@ -229,14 +272,16 @@ nav{
 				left: 0;
 				color:#FFAFAA; 
 
-				font-size: 1.1rem;
-			}
+				font-size: 1rem;
+					}
+					a:hover{
 		}
 
 
 
 	}
 
+}
 }
 /* animaciones */
 
@@ -251,7 +296,7 @@ nav{
 
 	}
 	@keyframes outmenu{
-		0%{top: 0;left: 2%; opacity: 1; }
+		0%{top: 0;left: 1.5%; opacity: 1; }
 		100% {top: 0;left:100vw; opacity: 0;}
 	}
 	.class_toapearmenu{
@@ -266,7 +311,7 @@ nav{
 	}
 	@keyframes enter{
 		0%{	top: 0;left: 100vw; opacity: 0; z-index: 0;	}
-		100% {top: 0;left:2%;opacity: 1; z-index: 2000}
+		100% {top: 0;left:1.5%;opacity: 1; z-index: 2000}
 	}
 
 
@@ -276,7 +321,7 @@ nav{
 #panDemonium, #ohms, #alexaSkills, #pocketMonster, #portafolio, #saludFinanciera, #contacto_ {
 	position:absolute;
 	top:100vh;
-	left: 2%;
+	left: 1.5%;
 	animation: moves .2s ease-out;
 	animation-fill-mode: both;
 	background-color: #4D706C;
@@ -299,7 +344,7 @@ nav{
 #close{
 	height: 4vh;
 	width: 4vh;
-	margin: 0;
+	margin: -2% 0;
 	padding: 0%;
 	font-size: 1.5rem;
 	z-index: 1000000;
@@ -317,50 +362,71 @@ nav{
 
 
 
-/* -----------------------------------------------------------------------------Slider--------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+Slider
+----------------------------------------------------------------------- */
 
 .slider_container{
-	width: 75vw;
+	width: 70vw;
 	height: 50vh;
 	margin: 1.2rem auto;
+	overflow:hidden;
 
-}
 
 
-.frame_container{
+	#frame_container{
 
 	height: 100%;
+	overflow: scroll;
 	display: flex;
-	transform: translateX(0);
-	transition: all .3s ease-out;
-}
-.image-slider{
 
-	height: 50vh;
+		.image_slider{
+
+		height: 100%;
+		float: left;
+		margin:0;
+
+		}
+	}
 
 }
+
+
+
+
 
 
 
 #pleft, #prigth{
 
 background-color: rgba(0,0,0,.3);
-
-display:inline-block;
-height: 1.5rem;
-width: 1.5rem;
+padding: 0;
+margin:0;
+height: 2.5rem;
+width: 2.5rem;
+position: absolute;
+top: 50%;
+left: 1%;
+display: flex;
 cursor: pointer;
+
+border-radius: 50%;
+overflow:hidden;
 
 
 	.pleft, .prigth{
+	
+	text-decoration: none;
+	display: inline-table;
+	margin:-25% auto;
+	padding: 0;
+	font-size: 2.5rem;
+	color:#FFAFAA;
+	font-family: 'Fascinate', cursive;
+	cursor: pointer;
+	border-radius: 50%;
 
-	margin: 0 auto;
-	padding: .2%;
-	font-size: 1.5rem;
-	color:black;
-	font-family: 'Cutive Mono', monospace;
 
-	position: inherit;
 
 
 	}
@@ -370,6 +436,7 @@ cursor: pointer;
 
 #prigth{
 
+left:88%;
 }
 
 
