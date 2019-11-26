@@ -32,11 +32,6 @@ let buttonClose  = (e)=> {
 
 
 
-
-
-
-
-
 /*Interactividad boton proyectos de circle menu*/
 
 
@@ -132,12 +127,6 @@ let createSlider = json =>{
 			}
 
 
-
-			
-
-
-
-
 			moves();
 }
 
@@ -180,9 +169,6 @@ let createSections = (json)=>{
 
  		createSlider(json);
 }
-
-
-
 
 
 let createContact = (json)=>{
@@ -246,43 +232,6 @@ let inputs = []
 
 
 
-
-
-
-
-
-
-
-/*_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
-
-contacto
-
-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 let contentsCall = (e) =>{
 	let route = "assets/json/"+e.target.id+".json";
 		fetch(route)
@@ -299,38 +248,6 @@ let contentsCall = (e) =>{
 		  		}
 		})
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 for(let i = 0; i < ul.length; i++) {
